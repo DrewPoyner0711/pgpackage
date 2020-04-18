@@ -1,5 +1,7 @@
 from argparse import Action, ArgumentParser
 
+#pgbackup postgres://bob@example.com:5432/db_one --driver s3 backups
+
 class DriverAction(Action):
     def __call__(self, parser, namespace, values, option_string=None):
         driver, destination= values
